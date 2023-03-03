@@ -13,6 +13,8 @@ final class FooterCollectionReusableView: UICollectionReusableView {
   
   static let identifier = "\(FooterCollectionReusableView.self)"
   
+  var reloadAllHandler: (() -> Void)?
+  
   // MARK: - UI Components
   
   private let button = {
@@ -29,6 +31,7 @@ final class FooterCollectionReusableView: UICollectionReusableView {
     super.init(frame: frame)
     setupLayouts()
     setupConstraints()
+    bind()
   }
   
   required init?(coder: NSCoder) {
