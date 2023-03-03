@@ -51,8 +51,8 @@ final class ViewController: UIViewController {
   private func setupConstraints() {
     NSLayoutConstraint.activate(
       [
-        self.collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-        self.collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+        self.collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+        self.collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
         self.collectionView.topAnchor.constraint(equalTo: self.view.topAnchor),
         self.collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
       ]
@@ -120,10 +120,10 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    CGSize(width: self.view.frame.width - 40, height: 80)
+    CGSize(width: self.collectionView.frame.width, height: 80)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-    CGSize(width: self.view.frame.width - 40, height: 40)
+    CGSize(width: self.collectionView.frame.width, height: 40)
   }
 }
