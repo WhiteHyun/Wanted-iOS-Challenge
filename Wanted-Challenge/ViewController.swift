@@ -76,6 +76,26 @@ extension ViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell
     else { fatalError() }
+    
+    cell.indexPath = indexPath
+    cell.buttonHandler = { [highResolutionImageURLs] imageView, indexPath in
+      let imageURL = highResolutionImageURLs[indexPath.row]
+      // 큰 데이터 이미지면 main thread로 돌릴 시 UI Reponse에 문제가 생길 수 있음.
+      // -> global 큐로 실행
+      DispatchQueue.global().async {
+        // url로 이미지를 불러옮
+        guard let url = URL(string: imageURL),
+              let data = try? Data(contentsOf: url),
+              let image = UIImage(data: data)
+        else {
+          return
+        }
+        // 불러온 이미지는 main queue에서 적용 -> UI를 적용하는 것이기 때문이 이를 처리 하지 않으면 에러 발생
+        DispatchQueue.main.async {
+          imageView.image = image
+        }
+      }
+    }
     return cell
   }
   
