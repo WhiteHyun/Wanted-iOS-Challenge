@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA912BA029B1C8E500BC12BB /* FooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA912B9F29B1C8E500BC12BB /* FooterCollectionReusableView.swift */; };
 		BAD67E1029B1B6C4009D8F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD67E0F29B1B6C4009D8F4A /* AppDelegate.swift */; };
 		BAD67E1229B1B6C4009D8F4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD67E1129B1B6C4009D8F4A /* SceneDelegate.swift */; };
 		BAD67E1429B1B6C4009D8F4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD67E1329B1B6C4009D8F4A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA912B9F29B1C8E500BC12BB /* FooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollectionReusableView.swift; sourceTree = "<group>"; };
 		BAD67E0C29B1B6C4009D8F4A /* Wanted-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wanted-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD67E0F29B1B6C4009D8F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD67E1129B1B6C4009D8F4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				BAD67E1129B1B6C4009D8F4A /* SceneDelegate.swift */,
 				BAD67E1329B1B6C4009D8F4A /* ViewController.swift */,
 				BAD67E2329B1BCD5009D8F4A /* CollectionViewCell.swift */,
+				BA912B9F29B1C8E500BC12BB /* FooterCollectionReusableView.swift */,
 				BAD67E1829B1B6C5009D8F4A /* Assets.xcassets */,
 				BAD67E1A29B1B6C5009D8F4A /* LaunchScreen.storyboard */,
 				BAD67E1D29B1B6C5009D8F4A /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD67E1429B1B6C4009D8F4A /* ViewController.swift in Sources */,
+				BA912BA029B1C8E500BC12BB /* FooterCollectionReusableView.swift in Sources */,
 				BAD67E1029B1B6C4009D8F4A /* AppDelegate.swift in Sources */,
 				BAD67E2429B1BCD5009D8F4A /* CollectionViewCell.swift in Sources */,
 				BAD67E1229B1B6C4009D8F4A /* SceneDelegate.swift in Sources */,
