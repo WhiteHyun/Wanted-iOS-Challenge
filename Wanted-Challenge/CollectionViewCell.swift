@@ -8,6 +8,9 @@
 import UIKit
 
 final class CollectionViewCell: UICollectionViewCell {
+  
+  // MARK: - Properties
+  
   static let identifier = "\(CollectionViewCell.self)"
   
   // MARK: - UI Components
@@ -21,8 +24,9 @@ final class CollectionViewCell: UICollectionViewCell {
   }()
   
   private let imageView = {
-    let imageView = UIImageView(image: UIImage(systemName: "photo")?.withRenderingMode(.alwaysTemplate))
-    imageView.contentMode = .scaleAspectFill
+    let imageView = UIImageView(image: UIImage(systemName: "photo"))
+    imageView.contentMode = .scaleAspectFit
+    imageView.clipsToBounds = true
     imageView.translatesAutoresizingMaskIntoConstraints = false
     return imageView
   }()
@@ -50,6 +54,7 @@ final class CollectionViewCell: UICollectionViewCell {
     super.init(frame: frame)
     setupLayouts()
     setupConstraints()
+    bind()
   }
   
   required init?(coder: NSCoder) {
@@ -73,7 +78,8 @@ final class CollectionViewCell: UICollectionViewCell {
         self.stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
         self.stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
         self.stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-        self.imageView.widthAnchor.constraint(equalToConstant: 100)
+        self.imageView.widthAnchor.constraint(equalToConstant: 100),
+        self.imageView.heightAnchor.constraint(equalTo: self.stackView.heightAnchor)
       ]
     )
   }
