@@ -7,13 +7,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+  
+  // MARK: - UI Components
+  
+  
+  // MARK: - Life Cycles
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    setupLayouts()
+    setupConstraints()
+    setupStyles()
   }
-
-
+  
+  // MARK: - Configurations
+  
+  private func setupLayouts() {
+    
+  }
+  
+  private func setupConstraints() {
+    
+  }
+  
+  private func setupStyles() {
+    self.view.backgroundColor = .systemBackground
+  }
 }
-
