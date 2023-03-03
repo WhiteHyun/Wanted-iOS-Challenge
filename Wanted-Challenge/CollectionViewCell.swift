@@ -83,4 +83,13 @@ final class CollectionViewCell: UICollectionViewCell {
       ]
     )
   }
+  
+  private func bind() {
+    loadButton.addTarget(self, action: #selector(loadButtonTapped), for: .touchUpInside)
+  }
+  
+  @objc
+  func loadButtonTapped() {
+    imageView.image = UIImage(systemName: "photo")
+  }
 }
