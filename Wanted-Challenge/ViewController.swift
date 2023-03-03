@@ -101,6 +101,17 @@ extension ViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
     guard let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionReusableView.identifier, for: indexPath) as? FooterCollectionReusableView
     else { fatalError() }
+    footerView.reloadAllHandler = { [collectionView] in
+      // collection view에서 현재 보이는 셀들의 indexPaths를 가져옴
+      let visibleIndexPaths = collectionView.indexPathsForVisibleItems
+      
+      // indexPaths에 해당하는 cells를 가져와서 imageView를 업데이트
+      for indexPath in visibleIndexPaths {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell else { continue }
+        cell.loadButtonTapped()
+      }
+    }
+    
     return footerView
   }
 }
