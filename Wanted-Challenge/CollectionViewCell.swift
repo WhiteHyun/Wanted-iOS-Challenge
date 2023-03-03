@@ -12,10 +12,8 @@ final class CollectionViewCell: UICollectionViewCell {
   // MARK: - Properties
   
   static let identifier = "\(CollectionViewCell.self)"
-  // cell의 indexPath
-  var indexPath: IndexPath?
   // 버튼이 눌렸을 때 불려지는 클로저
-  var buttonHandler: ((_ imageView: UIImageView, _ indexPath: IndexPath) -> Void)?
+  var buttonHandler: ((UIImageView) -> Void)?
   
   // MARK: - UI Components
   
@@ -94,8 +92,7 @@ final class CollectionViewCell: UICollectionViewCell {
   
   @objc
   func loadButtonTapped() {
-    guard let indexPath else { return }
     imageView.image = UIImage(systemName: "photo")
-    buttonHandler?(self.imageView, indexPath)
+    buttonHandler?(self.imageView)
   }
 }

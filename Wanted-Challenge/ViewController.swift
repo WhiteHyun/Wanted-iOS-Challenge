@@ -77,8 +77,7 @@ extension ViewController: UICollectionViewDataSource {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell
     else { fatalError() }
     
-    cell.indexPath = indexPath
-    cell.buttonHandler = { [highResolutionImageURLs] imageView, indexPath in
+    cell.buttonHandler = { [highResolutionImageURLs] imageView in
       let imageURL = highResolutionImageURLs[indexPath.row]
       // 큰 데이터 이미지면 main thread로 돌릴 시 UI Reponse에 문제가 생길 수 있음.
       // -> global 큐로 실행
