@@ -54,4 +54,13 @@ final class FooterCollectionReusableView: UICollectionReusableView {
       ]
     )
   }
+  
+  private func bind() {
+    button.addTarget(self, action: #selector(reloadAll), for: .touchUpInside)
+  }
+  
+  @objc
+  private func reloadAll() {
+    reloadAllHandler?()
+  }
 }
