@@ -12,6 +12,7 @@
 		BAD67E1429B1B6C4009D8F4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD67E1329B1B6C4009D8F4A /* ViewController.swift */; };
 		BAD67E1929B1B6C5009D8F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD67E1829B1B6C5009D8F4A /* Assets.xcassets */; };
 		BAD67E1C29B1B6C5009D8F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD67E1A29B1B6C5009D8F4A /* LaunchScreen.storyboard */; };
+		BAD67E2429B1BCD5009D8F4A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD67E2329B1BCD5009D8F4A /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BAD67E1829B1B6C5009D8F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAD67E1B29B1B6C5009D8F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAD67E1D29B1B6C5009D8F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAD67E2329B1BCD5009D8F4A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				BAD67E0F29B1B6C4009D8F4A /* AppDelegate.swift */,
 				BAD67E1129B1B6C4009D8F4A /* SceneDelegate.swift */,
 				BAD67E1329B1B6C4009D8F4A /* ViewController.swift */,
+				BAD67E2329B1BCD5009D8F4A /* CollectionViewCell.swift */,
 				BAD67E1829B1B6C5009D8F4A /* Assets.xcassets */,
 				BAD67E1A29B1B6C5009D8F4A /* LaunchScreen.storyboard */,
 				BAD67E1D29B1B6C5009D8F4A /* Info.plist */,
@@ -136,6 +139,7 @@
 			files = (
 				BAD67E1429B1B6C4009D8F4A /* ViewController.swift in Sources */,
 				BAD67E1029B1B6C4009D8F4A /* AppDelegate.swift in Sources */,
+				BAD67E2429B1BCD5009D8F4A /* CollectionViewCell.swift in Sources */,
 				BAD67E1229B1B6C4009D8F4A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
